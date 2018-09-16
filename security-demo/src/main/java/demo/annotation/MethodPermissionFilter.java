@@ -2,6 +2,7 @@ package demo.annotation;
 
 import demo.Main;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -19,6 +20,7 @@ public class MethodPermissionFilter {
         String packageName = Main.class.getPackage().getName();
         ScanPackage scanPackage = new ScanPackage(packageName);
         proxyMap = getEnableSecureClass(scanPackage.getClasses());
+        System.out.println("打印被@EnableSecure所注解的类以及该类所共用的方法\n" + proxyMap.toString());
     }
 
     /**
@@ -32,7 +34,7 @@ public class MethodPermissionFilter {
     }
 
     /**
-     * 方法权限验证，如果所拥有的权限超出方法所允许的权限则抛出异常
+     * 方法权限验证，如果权限正确返回true，否则返回false
      * @param clsName
      * @param meth
      * @param r

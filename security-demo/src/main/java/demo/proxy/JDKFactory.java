@@ -15,7 +15,7 @@ public class JDKFactory {
     private proxyInterface proxy;
 
     /**
-     * JDK代理实现
+     * JDK代理实现，统一拦截被代理的方法
      * @param proxy
      * @param role
      */

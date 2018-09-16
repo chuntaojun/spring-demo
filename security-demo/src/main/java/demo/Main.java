@@ -12,7 +12,7 @@ import demo.security.impl.UserServiceImpl;
 public class Main {
 
     public static void main(String[] args) {
-        Session user = new Session("BB", "ADMIN", new UserServiceImpl());
+        Session user = new Session("BB", "USER", new UserServiceImpl());
         user.run();
         Session admin = new Session("BB", "ADMIN", new AdminServiceImpl());
         admin.run();

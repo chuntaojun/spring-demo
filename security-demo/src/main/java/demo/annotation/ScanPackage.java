@@ -27,6 +27,7 @@ public class ScanPackage {
         this.packageName = packageName;
         this.classes = new HashSet<>();
         sacn();
+        System.out.println("打印制定包下类扫描的结果\n" + classes.toString());
     }
 
     /**

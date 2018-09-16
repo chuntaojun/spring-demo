@@ -5,6 +5,8 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hot-swap_main" target="1.8" />
+      <module name="hot-swap_test" target="1.8" />
       <module name="security-demo_main" target="1.8" />
       <module name="security-demo_test" target="1.8" />
       <module name="Thread_main" target="1.8" />
