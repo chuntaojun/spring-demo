@@ -47,6 +47,7 @@ public class Main {
             if (m.aClass != null) {
                 Method method = m.aClass.getMethod("log", null);
                 Object o = m.aClass.getConstructor(new Class[]{}).newInstance(new Object[]{});
+
                 method.invoke(o, null);
             }
             Thread.sleep(5 * 1000);
